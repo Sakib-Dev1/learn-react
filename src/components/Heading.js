@@ -1,6 +1,9 @@
-const Heading =(props)=>{
-    return <div>
-      <h3>{props.recepieTitle}</h3>
+const Heading = ({ recepieName, children }) => {
+  return (
+    <div>
+      <h3>{recepieName}</h3>
+      <p>{children}</p>
     </div>
-  }
-export default Heading;  
+  );
+};
+export default Heading;

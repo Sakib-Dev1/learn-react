@@ -1,6 +1,8 @@
-const Price = (props)=>{
-    return <div>
-      <p>{props.recepiePrice}</p>
+const Price = ({ recepiePrice }) => {
+  return (
+    <div>
+      <p>{recepiePrice}$</p>
     </div>
-  }
-  export default Price;
+  );
+};
+export default Price;

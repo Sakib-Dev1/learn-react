@@ -1,7 +1,5 @@
 import "../index.css";
-const Image = (props) => {
-  return (
-    <img src={props.recepieImg} alt={props.recepieTitle} className="image" />
-  );
+const Image = ({ recepieImg, recepieName }) => {
+  return <img src={recepieImg} alt={recepieName} className="image" />;
 };
 export default Image;

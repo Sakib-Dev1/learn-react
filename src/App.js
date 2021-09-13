@@ -23,22 +23,33 @@ function App() {
   ];
   return (
     <div>
-      <h2>Learn React</h2>
-      <FoodDish
-        recepieImg={recepieDetails[0].img}
-        recepieTitle={recepieDetails[0].recepieName}
-        recepiePrice={recepieDetails[0].price}
-      />
-      <FoodDish
-        recepieImg={recepieDetails[1].img}
-        recepieTitle={recepieDetails[1].recepieName}
-        recepiePrice={recepieDetails[1].price}
-      />
-      <FoodDish
-        recepieImg={recepieDetails[2].img}
-        recepieTitle={recepieDetails[2].recepieName}
-        recepiePrice={recepieDetails[2].price}
-      />
+      <h2 style={{ textAlign: "center", marginBottom: "5rem" }}>Learn React</h2>
+      <div className="eachDish">
+        {/* <FoodDish
+          recepieImg={recepieDetails[0].img}
+          recepieTitle={recepieDetails[0].recepieName}
+          recepiePrice={recepieDetails[0].price}
+        />
+        <FoodDish
+          recepieImg={recepieDetails[1].img}
+          recepieTitle={recepieDetails[1].recepieName}
+          recepiePrice={recepieDetails[1].price}
+        />
+        <FoodDish
+          recepieImg={recepieDetails[2].img}
+          recepieTitle={recepieDetails[2].recepieName}
+          recepiePrice={recepieDetails[2].price}
+        /> */}
+        {recepieDetails.map((singleRecepie) => {
+          return (
+            <FoodDish
+              recepieImg={singleRecepie.img}
+              recepieName={singleRecepie.recepieName}
+              recepiePrice={singleRecepie.price}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
